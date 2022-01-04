@@ -36,7 +36,7 @@ export const getStaticProps = async () => {
 }
 
 
-export default function Home({ posts }) {
+export const Home = ({ posts }) => {
   return (
     <div>
       <Head>
@@ -48,7 +48,7 @@ export default function Home({ posts }) {
       <div className="posts">
         {posts.map((post, index) => (
           // <p>{post.data.title}</p>
-          <Post post={post} />
+          <Post key={index} post={post} />
         ))}
       </div>
 
@@ -56,3 +56,4 @@ export default function Home({ posts }) {
   )
 }
 
+export default Home
