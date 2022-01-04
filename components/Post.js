@@ -4,13 +4,13 @@ import Link from "next/link"
 const Post = ({ post }) => {
     return (
         <div className="card">
-            <img src={post.data.img} alt="" />
+            <img src={post.meta.img} alt="" className="post-img" />
 
-            <div className="post-date">Posted on {post.data.date}</div>
+            <div className="post-date">Posted on {post.meta.date}</div>
 
-            <h3>{post.data.title}</h3>
+            <h3>{post.meta.title}</h3>
 
-            <p>{post.data.excerpt}</p>
+            <p>{post.meta.excerpt}</p>
 
             <Link href={`/b/${post.slug}`}>
                 <a className="btn">Read More</a>
