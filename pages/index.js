@@ -5,8 +5,7 @@ import matter from 'gray-matter'
 
 import Head from 'next/head'
 
-// UTILS
-// import getStaticProps from '../utils/getStaticProps'
+import Post from '../components/Post'
 
 export const getStaticProps = async () => {
   // read dir
@@ -47,7 +46,8 @@ export default function Home({ posts }) {
 
       <div className="posts">
         {posts.map((post, index) => (
-          <p>{post.data.title}</p>
+          // <p>{post.data.title}</p>
+          <Post post={post} />
         ))}
       </div>
 

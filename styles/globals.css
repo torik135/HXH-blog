@@ -1,21 +1,20 @@
 /* ROOT */
 :root {
-
   /* COLOR */
-  --white:  rgba(250, 250, 250, 1);
+  --white: rgba(250, 250, 250, 1);
   --white50: rgba(250, 250, 250, 0.5);
-  
+
   --black: rgba(50, 50, 50, 1);
   --black50: rgba(50, 50, 50, 0.5);
 
-  --red:  rgba(250, 100, 100, 1);
+  --red: rgba(250, 100, 100, 1);
   --blue: rgba(12, 191, 232, 1);
   --yellow: rgba(250, 250, 50, 1);
 
   --gray50: rgba(100, 100, 100, 0.5);
 
-  --color-gradient1:  rgb(1, 255, 207);
-  --color-gradient2:  rgb(255, 252, 0);
+  --color-gradient1: rgb(1, 255, 207);
+  --color-gradient2: rgb(255, 252, 0);
 
   --bootstrap-primary: #0d6efd;
   --bootstrap-warning: #ffc107;
@@ -23,7 +22,6 @@
 
   /* BOX-SHADOW */
   --box-shadow1: 0 4px 8px var(--black50);
-
 }
 
 /* ROOT END */
@@ -95,7 +93,7 @@ header a {
 }
 
 .btn:hover {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 
 .btn-back {
@@ -121,6 +119,10 @@ header a {
   box-shadow: var(--box-shadow1);
 }
 
+.card img {
+  height: 350px;
+}
+
 .card-page {
   padding: 15px 30px;
 }
@@ -135,7 +137,8 @@ header a {
   padding: 3px 10px;
 }
 
-.post-body ul, ol {
+.post-body ul,
+ol {
   font-size: 110%;
   line-height: 2.3;
   font-weight: bold;
@@ -151,11 +154,10 @@ header a {
 
 /* POST END */
 
-
 /* MEDIA */
 
 /* 500 */
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .posts {
     grid-template-columns: 1fr;
   }
