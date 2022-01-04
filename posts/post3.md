@@ -5,7 +5,7 @@ excerpt: 'this excerpt'
 img: '/img/img3.jpg'
 ---
 
-## This is Heading 2
+## This is Post 3
 
 - this list item 1
 - this list item 2
