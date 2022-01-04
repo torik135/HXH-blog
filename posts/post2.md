@@ -2,7 +2,7 @@
 title: 'this post 2'
 date: '02 Jan 2022'
 excerpt: 'this excerpt'
-img: '/img/img1.jpg'
+img: '/img/img2.jpg'
 ---
 
 ## This is Heading 2
