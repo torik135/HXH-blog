@@ -1,6 +1,42 @@
+import fs from 'fs'
+import path from 'path'
+
+import matter from 'gray-matter'
+
 import Head from 'next/head'
 
-export default function Home() {
+// UTILS
+// import getStaticProps from '../utils/getStaticProps'
+
+export const getStaticProps = async () => {
+  // read dir
+  const files = fs.readdirSync(path.join('posts'))
+
+  // create slug from file with frontmatter
+  const posts = files.map(filename => {
+    // slug
+    const slug = filename.replace('.md', '')
+
+    // frontmatter
+    const mdWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+
+    const { data } = matter(mdWithMeta)
+
+    return {
+      slug,
+      data
+    }
+  })
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}
+
+
+export default function Home({ posts }) {
   return (
     <div>
       <Head>
@@ -9,7 +45,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>this</h1>
+      <div className="posts">
+        {posts.map((post, index) => (
+          <p>{post.data.title}</p>
+        ))}
+      </div>
+
     </div>
   )
 }
+
