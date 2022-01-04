@@ -6,6 +6,7 @@ import matter from 'gray-matter'
 import Head from 'next/head'
 
 import Post from '../components/Post'
+import sortByDate from '../utils/sortByDate'
 
 export const getStaticProps = async () => {
   // read dir
@@ -29,7 +30,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      posts,
+      posts: posts.sort(sortByDate),
     },
   }
 }

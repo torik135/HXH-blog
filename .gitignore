@@ -34,5 +34,5 @@ yarn-error.log*
 .vercel
 
 
-/utils
+/utils/getStaticProps.js
 /posts/tes.md
