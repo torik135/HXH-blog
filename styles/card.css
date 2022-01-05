@@ -1,0 +1,124 @@
+/* ROOT */
+:root {
+  /* COLOR */
+
+  --prim-color: #585858;
+
+  --white: rgba(250, 250, 250, 1);
+  --white50: rgba(250, 250, 250, 0.5);
+
+  --black: rgba(50, 50, 50, 1);
+  --black50: rgba(50, 50, 50, 0.5);
+  --black25: rgba(50, 50, 50, 0.25);
+
+  --red: rgba(250, 100, 100, 1);
+  --blue: rgba(12, 191, 232, 1);
+  --yellow: rgba(250, 250, 50, 1);
+
+  --gray50: rgba(100, 100, 100, 0.5);
+
+  /* BOOTSTRAP COLOR */
+  --bootstrap-primary: #0d6efd;
+  --bootstrap-warning: #ffc107;
+  --bootstrap-danger: #dc3545;
+
+  /* GRADIENT */
+  --color-gradient1: rgb(1, 255, 207);
+  --color-gradient2: rgb(255, 252, 0);
+
+  /* BOX-SHADOW */
+  --box-shadow1: 0 4px 8px var(--black50);
+  --box-shadow2: -1rem 0 3rem var(--black);
+  --box-shadow3: inset 2px 2px 2px var(--black50),
+    inset -2px -2px 2px var(--white50);
+
+  --linear-gradient1: linear-gradient(
+    90deg,
+    var(--black),
+    var(--black) 1px,
+    var(--prim-color) 0,
+    var(--prim-color)
+  );
+}
+
+/* ROOT END */
+
+/* UTILS */
+
+/* UTILS END */
+
+/* CARD */
+.card-list {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+  background: var(--prim-color);
+  border-radius: 10px;
+}
+
+.card-box {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: var(--prim-color);
+  color: var(--white);
+  box-shadow: var(--box-shadow2);
+  transition: 0.2s;
+}
+
+.card-box:hover {
+  transform: translateY(-1rem);
+}
+
+/* 
+~ = general sibling combinator
+to call all sibling class after the element
+*/
+.card-box:hover ~ .card-box {
+  transform: translateX(130px);
+}
+
+/* 
+not first child then margin left
+*/
+.card-box:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card-content {
+  overflow-y: scroll;
+}
+/* CARD END */
+
+/* WEBKIT */
+.card-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.card-list::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 10px;
+}
+.card-list::-webkit-scrollbar-track {
+  background: var(--yellow);
+  border-radius: 16px;
+}
+
+.card-content::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.card-content::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 10px;
+}
+.card-content::-webkit-scrollbar-track {
+  background: var(--yellow);
+  border-radius: 16px;
+}
+/* WEBKIT END */

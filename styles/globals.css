@@ -84,6 +84,10 @@ header a {
   margin-bottom: 15px;
 }
 
+.blog-name {
+  cursor: pointer;
+}
+
 /* UTILS END */
 
 /* PADDING & MARGIN */
