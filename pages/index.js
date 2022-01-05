@@ -7,6 +7,7 @@ import Head from 'next/head'
 
 import Post from '../components/Post'
 import Card from '../components/Card'
+import Footer from '../components/Footer'
 
 import sortByDate from '../utils/sortByDate'
 
@@ -59,6 +60,8 @@ export const Home = ({ posts }) => {
           <Post key={index} post={post} />
         ))}
       </div>
+
+      <Footer />
 
     </div>
   )
