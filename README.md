@@ -1,3 +1,3 @@
 # Simple blog using next.js and markdown
 
-## LIVE :
+## LIVE : https://this-hxh-blog.vercel.app/
