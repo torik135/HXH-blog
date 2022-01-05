@@ -1,6 +1,9 @@
 /* ROOT */
 :root {
   /* COLOR */
+
+  --prim-color: #585858;
+
   --white: rgba(250, 250, 250, 1);
   --white50: rgba(250, 250, 250, 0.5);
 
@@ -13,12 +16,14 @@
 
   --gray50: rgba(100, 100, 100, 0.5);
 
-  --color-gradient1: rgb(1, 255, 207);
-  --color-gradient2: rgb(255, 252, 0);
-
+  /* BOOTSTRAP COLOR */
   --bootstrap-primary: #0d6efd;
   --bootstrap-warning: #ffc107;
   --bootstrap-danger: #dc3545;
+
+  /* GRADIENT */
+  --color-gradient1: rgb(1, 255, 207);
+  --color-gradient2: rgb(255, 252, 0);
 
   /* BOX-SHADOW */
   --box-shadow1: 0 4px 8px var(--black50);
@@ -36,6 +41,7 @@
 
 body {
   font-family: sans-serif;
+  font-weight: 700;
 }
 
 p {
@@ -45,7 +51,7 @@ p {
 
 a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--white);
 }
 
 img {
@@ -54,10 +60,11 @@ img {
 }
 
 header {
-  background: var(--blue);
+  background: var(--prim-color);
   color: var(--white);
   padding: 5px;
   margin-bottom: 40px;
+  box-shadow: var(--box-shadow1);
 }
 
 header a {
@@ -71,14 +78,99 @@ header a {
   padding: 0 10px;
 }
 
+.line {
+  border-bottom: 2px solid var(--white);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 /* UTILS END */
+
+/* PADDING & MARGIN */
+
+.py-lg {
+  padding: 40px 0;
+}
+
+.py-md {
+  padding: 20px 0;
+}
+
+.py-sm {
+  padding: 10px 0;
+}
+
+.px-lg {
+  padding: 0 40px;
+}
+
+.px-md {
+  padding: 0 20px;
+}
+
+.px-sm {
+  padding: 0 10px;
+}
+
+.px-0 {
+  padding: 0 150px 0 150px;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 1.5rem;
+}
+
+.m-3 {
+  margin: 2rem;
+}
+
+.m-4 {
+  margin: 3rem;
+}
+
+.m-5 {
+  margin: 4rem;
+}
+
+/* PADDING & MARGIN END */
+
+/* TEXT */
+.text-red {
+  color: var(--red);
+}
+
+/* TEXT END */
 
 /* BTN */
 
 .btn {
   display: inline-block;
-  background: var(--blue);
-  color: var(--white);
+  background: var(--yellow);
+  color: var(--black);
   border: none;
   padding: 8px 16px;
   border-radius: 5px;
@@ -119,10 +211,12 @@ header a {
 }
 
 .card {
-  padding: 10px;
+  background-color: var(--prim-color);
+  padding: 30px;
   border-radius: 10px;
   box-shadow: var(--box-shadow1);
   margin-bottom: 30px;
+  color: var(--white);
 }
 
 .card img {
@@ -138,9 +232,17 @@ header a {
 }
 
 .post-date {
-  background: var(--white);
-  margin-bottom: 20px;
-  padding: 3px 10px;
+  background: var(--yellow);
+  color: var(--prim-color);
+  border-radius: 15px;
+  /* margin-bottom: 20px; */
+  padding: 8px;
+  position: absolute;
+  margin-top: -45px;
+  height: 30px;
+  text-align: center;
+  align-self: center;
+  font-weight: 600;
 }
 
 .post-body ul,

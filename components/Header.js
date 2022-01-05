@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <div className="container">
         <Link href="/" passHref>
-          <h2>This Blog</h2>
+          <h2>Hunter<i className="text-red">X</i>Hunter Blog</h2>
         </Link>
       </div>
     </header >

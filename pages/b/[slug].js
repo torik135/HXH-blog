@@ -35,7 +35,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
     }
 }
 
-const PostPage = ({ meta: { title, date, img }, slug, content }) => {
+const PostPage = ({ meta: { title, excerpt, date, img }, slug, content }) => {
     return <>
 
         <Link href="/">
@@ -44,10 +44,19 @@ const PostPage = ({ meta: { title, date, img }, slug, content }) => {
 
         <div className="card card-page">
             <h1 className="post-title">{title}</h1>
-            <div className="post-date">Pub date {date}</div>
+            <div className="post-date-page">Pub date {date}</div>
+
+            <div className="line"></div>
+
             <img src={img} alt={img} />
 
-            <div className="post-body">
+            <div className="m-1">
+                <div className="line"></div>
+                <i>{excerpt}</i>
+                <div className="line"></div>
+            </div>
+
+            <div className="post-body py-md">
                 <div
                     dangerouslySetInnerHTML={
                         { __html: marked(content) }

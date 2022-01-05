@@ -4,11 +4,19 @@ import Link from "next/link"
 const Post = ({ post }) => {
     return (
         <div className="card">
-            <img src={post.meta.img} alt="" className="post-img" />
+            <div className="post-date">
+                Posted on {post.meta.date}
+            </div>
 
-            <div className="post-date">Posted on {post.meta.date}</div>
+            {/* <img src={post.meta.img} alt="" className="post-img" /> */}
 
-            <h3>{post.meta.title}</h3>
+
+
+            <h2 className="post-title">
+                {post.meta.title}
+            </h2>
+
+            <div className="line"></div>
 
             <p>{post.meta.excerpt}</p>
 
